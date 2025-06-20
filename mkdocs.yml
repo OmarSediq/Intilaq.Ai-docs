@@ -6,7 +6,7 @@ theme:
     - search.highlight
     - toc.integrate
 nav:
-  - Overview: overview.md
+  - Home: index.md
   - Authentication & Authorization: auth_and_authz.md
   - CV Builder: cv_builder.md
   - Interview System: interview_system.md
