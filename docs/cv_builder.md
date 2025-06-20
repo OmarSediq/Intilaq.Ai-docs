@@ -203,12 +203,3 @@ Each database model has its own dedicated **Service Class**, which:
 | `CVResumeExportService` | Generates full HTML → PDF/DOCX and stores it | `ResumeRepository`, `HTMLRenderer`, `GridFSStorageService` | ❌ |
 
 ---
-
-## Validation Pattern (Standard)
-
-Example from service layer:
-
-```python
-header = await header_repo.get_by_user_id(user_id)
-if not header:
-    return error_response(404, "Header not found")
