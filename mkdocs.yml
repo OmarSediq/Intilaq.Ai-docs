@@ -6,7 +6,6 @@ theme:
     - search.highlight
     - toc.integrate
 nav:
-  - Home: index.md
   - Overview: overview.md
   - Authentication & Authorization: auth_and_authz.md
   - CV Builder: cv_builder.md
