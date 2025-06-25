@@ -1,0 +1,1615 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../hr_interview/">
+      
+      
+        <link rel="next" href="../project_structure/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>API Reference - Intilaq AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-reference-intilaq-ai" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Intilaq AI" class="md-header__button md-logo" aria-label="Intilaq AI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Intilaq AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Intilaq AI" class="md-nav__button md-logo" aria-label="Intilaq AI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Intilaq AI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auth_and_authz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authentication & Authorization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cv_builder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CV Builder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interview_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interview System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hr_interview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HR Interview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#user-authentication-schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Authentication Schemas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Authentication Schemas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signuprequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      SignupRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loginrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      LoginRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifyaccountrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      VerifyAccountRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forgotpasswordrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      ForgotPasswordRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resetpasswordrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      ResetPasswordRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resendcoderequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      ResendCodeRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refreshtokenrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      RefreshTokenRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updateuserrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      UpdateUserRequest
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hr-authentication-schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      HR Authentication Schemas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HR Authentication Schemas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jobdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      JobData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hrsignuprequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      HrSignupRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hrloginrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      HrLoginRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hrverifyrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      HrVerifyRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hrresendcoderequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      HrResendCodeRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interviewloginrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      InterviewLoginRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interviewanswerrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      InterviewAnswerRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interviewmetadatarequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      InterviewMetadataRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hraddquestionrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      HRAddQuestionRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interviewinvitationrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      InterviewInvitationRequest
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cv-builder-schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      CV Builder Schemas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CV Builder Schemas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#headerrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      HeaderRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awardsrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      AwardsRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#certificationrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      CertificationRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#educationrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      EducationRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experiencerequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExperienceRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#experiencesaverequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExperienceSaveRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objectivesaverequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      ObjectiveSaveRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projectrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      ProjectRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projectdescriptionsaverequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      ProjectDescriptionSaveRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skillslanguagesrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      SkillsLanguagesRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saveskillsrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      SaveSkillsRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volunteeringrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      VolunteeringRequest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#savevolunteeringrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      SaveVolunteeringRequest
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deployment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Backend_Presentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backend Presentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="api-reference-intilaq-ai">API Reference – Intilaq AI</h1>
+<p>This file documents the active API endpoints in the Intilaq AI project. All endpoints listed follow a consistent response pattern using the custom response template defined below.</p>
+<hr />
+<h2 id="user-authentication-schemas">User Authentication Schemas</h2>
+<hr />
+<h3 id="signuprequest">SignupRequest</h3>
+<p>Used to register a new user account.</p>
+<ul>
+<li><code>username</code> (str) – required  </li>
+<li><code>email</code> (EmailStr) – required  </li>
+<li><code>password</code> (str) – required  </li>
+<li><code>confirm_password</code> (str) – required  </li>
+</ul>
+<hr />
+<h3 id="loginrequest">LoginRequest</h3>
+<p>Used for user login.</p>
+<ul>
+<li><code>email</code> (EmailStr) – required  </li>
+<li><code>password</code> (str) – required  </li>
+</ul>
+<hr />
+<h3 id="verifyaccountrequest">VerifyAccountRequest</h3>
+<p>Used to verify a newly registered account.</p>
+<ul>
+<li><code>code</code> (str) – required  </li>
+<li><code>new_password</code> (str) – optional (used for recovery flows)  </li>
+</ul>
+<hr />
+<h3 id="forgotpasswordrequest">ForgotPasswordRequest</h3>
+<p>Used to trigger a password reset via email.</p>
+<ul>
+<li><code>email</code> (EmailStr) – required  </li>
+</ul>
+<hr />
+<h3 id="resetpasswordrequest">ResetPasswordRequest</h3>
+<p>Used to reset the password using a verification code.</p>
+<ul>
+<li><code>email</code> (EmailStr) – required  </li>
+<li><code>reset_code</code> (str) – required  </li>
+<li><code>new_password</code> (str) – required  </li>
+</ul>
+<hr />
+<h3 id="resendcoderequest">ResendCodeRequest</h3>
+<p>Used to resend the account verification code.</p>
+<ul>
+<li><code>email</code> (EmailStr) – required  </li>
+</ul>
+<hr />
+<h3 id="refreshtokenrequest">RefreshTokenRequest</h3>
+<p>Used to request a new access token using a refresh token.</p>
+<ul>
+<li><code>refresh_token</code> (str) – required  </li>
+</ul>
+<hr />
+<h3 id="updateuserrequest">UpdateUserRequest</h3>
+<p>Used to update the current user's account credentials.</p>
+<ul>
+<li><code>username</code> (str) – required  </li>
+<li><code>email</code> (EmailStr) – required  </li>
+<li><code>password</code> (str) – required  </li>
+<li><code>confirm_password</code> (str) – required  </li>
+</ul>
+<hr />
+<h2 id="hr-authentication-schemas">HR Authentication Schemas</h2>
+<h3 id="jobdata"><code>JobData</code></h3>
+<p>Represents job metadata used for generating interview questions.</p>
+<ul>
+<li><code>job_title</code>: <em>(str)</em> – Title of the job.</li>
+<li><code>level</code>: <em>(Optional[str])</em> – Seniority level (e.g., Junior, Senior).</li>
+<li><code>description</code>: <em>(Optional[str])</em> – Job description or notes.</li>
+</ul>
+<hr />
+<h3 id="hrsignuprequest"><code>HrSignupRequest</code></h3>
+<p>Used for registering a new HR account.</p>
+<ul>
+<li><code>name</code>: <em>(str)</em> – HR person's name.</li>
+<li><code>company_name</code>: <em>(str)</em> – Name of the company.</li>
+<li><code>business_email</code>: <em>(EmailStr)</em> – Official company email address.</li>
+<li><code>company_field</code>: <em>(str)</em> – Industry or field of the company.</li>
+<li><code>password</code>: <em>(str)</em> – Password.</li>
+<li><code>confirm_password</code>: <em>(str)</em> – Confirmation of the password.</li>
+</ul>
+<hr />
+<h3 id="hrloginrequest"><code>HrLoginRequest</code></h3>
+<p>Used to authenticate an existing HR account.</p>
+<ul>
+<li><code>business_email</code>: <em>(EmailStr)</em> – HR login email.</li>
+<li><code>password</code>: <em>(str)</em> – HR login password.</li>
+</ul>
+<hr />
+<h3 id="hrverifyrequest"><code>HrVerifyRequest</code></h3>
+<p>Used for verifying an HR account with a code.</p>
+<ul>
+<li><code>code</code>: <em>(str)</em> – 6-digit or custom verification code.</li>
+</ul>
+<hr />
+<h3 id="hrresendcoderequest"><code>HrResendCodeRequest</code></h3>
+<p>Used to resend the verification code to the HR email.</p>
+<ul>
+<li><code>business_email</code>: <em>(EmailStr)</em> – HR email.</li>
+</ul>
+<hr />
+<h3 id="interviewloginrequest"><code>InterviewLoginRequest</code></h3>
+<p>Used when a candidate joins an interview.</p>
+<ul>
+<li><code>name</code>: <em>(str)</em> – Candidate's name.</li>
+<li><code>email</code>: <em>(EmailStr)</em> – Candidate's email.</li>
+</ul>
+<hr />
+<h3 id="interviewanswerrequest"><code>InterviewAnswerRequest</code></h3>
+<p>Used when a candidate submits a text answer.</p>
+<ul>
+<li><code>text_answer</code>: <em>(Optional[str])</em> – Written answer (if response_type is <code>text</code>).</li>
+</ul>
+<hr />
+<h3 id="interviewmetadatarequest"><code>InterviewMetadataRequest</code></h3>
+<p>Used by HR to define interview metadata and timing.</p>
+<ul>
+<li><code>job_title</code>: <em>(str)</em> – Job title for the interview.</li>
+<li><code>level</code>: <em>(str)</em> – Job level or experience requirement.</li>
+<li><code>job_requirements</code>: <em>(Optional[str])</em> – Specific job requirements.</li>
+<li><code>specific_date</code>: <em>(Optional[datetime])</em> – Scheduled interview date (if exact).</li>
+<li><code>time</code>: <em>(Optional[str])</em> – Time of interview (if applicable).</li>
+<li><code>date_range</code>: <em>(Optional[str])</em> – Flexible date range in format <code>"YYYY-MM-DD to YYYY-MM-DD"</code>.</li>
+</ul>
+<hr />
+<h3 id="hraddquestionrequest"><code>HRAddQuestionRequest</code></h3>
+<p>Used to add or update a question in an interview.</p>
+<ul>
+<li><code>question_text</code>: <em>(Optional[str])</em> – The question itself.</li>
+<li><code>response_type</code>: <em>(Optional[str])</em> – Must be <code>"text"</code> or <code>"video"</code>.</li>
+<li><code>time_limit</code>: <em>(Optional[int])</em> – Duration in seconds to answer the question.</li>
+</ul>
+<hr />
+<h3 id="interviewinvitationrequest"><code>InterviewInvitationRequest</code></h3>
+<p>Used to invite participants to an interview.</p>
+<ul>
+<li><code>emails</code>: <em>(Optional[List[EmailStr]])</em> – List of participant emails.</li>
+<li><code>email_description</code>: <em>(Optional[str])</em> – Optional message in the email.</li>
+<li><code>interview_link</code>: <em>(str)</em> – URL the participant uses to access the interview.</li>
+</ul>
+<h2 id="cv-builder-schemas">CV Builder Schemas</h2>
+<hr />
+<h3 id="headerrequest">HeaderRequest</h3>
+<p>Used to submit personal information for the resume header.</p>
+<ul>
+<li><code>full_name</code> (str) – required  </li>
+<li><code>job_title</code> (str) – optional  </li>
+<li><code>email</code> (EmailStr) – required  </li>
+<li><code>phone_number</code> (str) – optional  </li>
+<li><code>address</code> (str) – optional  </li>
+<li><code>linkedin_profile</code> (str) – optional  </li>
+<li><code>github_profile</code> (str) – optional  </li>
+<li><code>years_of_experience</code> (int) – optional  </li>
+</ul>
+<hr />
+<h3 id="awardsrequest">AwardsRequest</h3>
+<p>Used to submit an award entry.</p>
+<ul>
+<li><code>award</code> (str) – required  </li>
+<li><code>organization</code> (str) – optional  </li>
+<li><code>start_date</code> (date) – required  </li>
+<li><code>end_date</code> (date) – optional  </li>
+</ul>
+<hr />
+<h3 id="certificationrequest">CertificationRequest</h3>
+<p>Used to add a certification to the resume.</p>
+<ul>
+<li><code>certification_title</code> (str) – required  </li>
+<li><code>upload</code> (str) – optional  </li>
+<li><code>link</code> (str) – optional  </li>
+</ul>
+<hr />
+<h3 id="educationrequest">EducationRequest</h3>
+<p>Used to add an education entry.</p>
+<ul>
+<li><code>degree_and_major</code> (str) – required  </li>
+<li><code>school</code> (str) – required  </li>
+<li><code>city</code> (str) – optional  </li>
+<li><code>country</code> (str) – optional  </li>
+<li><code>start_date</code> (date) – required  </li>
+<li><code>end_date</code> (date) – optional  </li>
+<li><code>description</code> (str) – optional  </li>
+</ul>
+<hr />
+<h3 id="experiencerequest">ExperienceRequest</h3>
+<p>Used to add a professional experience entry.</p>
+<ul>
+<li><code>role</code> (str) – required  </li>
+<li><code>start_date</code> (date) – required  </li>
+<li><code>end_date</code> (date) – optional  </li>
+<li><code>company_name</code> (str) – optional  </li>
+</ul>
+<hr />
+<h3 id="experiencesaverequest">ExperienceSaveRequest</h3>
+<p>Used to save the selected AI-generated experience description.</p>
+<ul>
+<li><code>selected_description</code> (str) – required  </li>
+</ul>
+<hr />
+<h3 id="objectivesaverequest">ObjectiveSaveRequest</h3>
+<p>Used to submit or edit the objective statement.</p>
+<ul>
+<li><code>description</code> (str) – optional  </li>
+</ul>
+<hr />
+<h3 id="projectrequest">ProjectRequest</h3>
+<p>Used to add a project entry.</p>
+<ul>
+<li><code>project_name</code> (str) – required  </li>
+<li><code>link</code> (str) – optional  </li>
+</ul>
+<hr />
+<h3 id="projectdescriptionsaverequest">ProjectDescriptionSaveRequest</h3>
+<p>Used to save the selected project description generated by AI.</p>
+<ul>
+<li><code>selected_description</code> (str) – required  </li>
+</ul>
+<hr />
+<h3 id="skillslanguagesrequest">SkillsLanguagesRequest</h3>
+<p>Used to submit user skills and languages.</p>
+<ul>
+<li><code>languages</code> (str) – required  </li>
+<li><code>skills</code> (str) – optional  </li>
+<li><code>level</code> (str) – optional  </li>
+</ul>
+<hr />
+<h3 id="saveskillsrequest">SaveSkillsRequest</h3>
+<p>Used to save AI-suggested or selected skills and language levels.</p>
+<ul>
+<li><code>selected_skills</code> (str) – required  </li>
+<li><code>selected_language</code> (str) – required  </li>
+<li><code>selected_level</code> (str) – required  </li>
+</ul>
+<hr />
+<h3 id="volunteeringrequest">VolunteeringRequest</h3>
+<p>Used to submit a volunteering experience.</p>
+<ul>
+<li><code>organization</code> (str) – required  </li>
+<li><code>role</code> (str) – required  </li>
+<li><code>start_date</code> (date) – required  </li>
+<li><code>end_date</code> (date) – optional  </li>
+<li><code>description</code> (str) – optional  </li>
+</ul>
+<hr />
+<h3 id="savevolunteeringrequest">SaveVolunteeringRequest</h3>
+<p>Used to save the selected AI-generated volunteering description.</p>
+<ul>
+<li><code>selected_description</code> (str) – required  </li>
+</ul>
+<hr />
+<h1 id="modules">Modules</h1>
+<h2 id="1-user-authentication">1. User Authentication</h2>
+<h3 id="post-apiusersregister">POST <code>/api/users/register/</code></h3>
+<p>Registers a new user account.</p>
+<ul>
+<li><strong>Request Body</strong>: <code>SignupRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apiusersverify-account">POST <code>/api/users/verify-account/</code></h3>
+<p>Verifies the account using a 6-digit code.</p>
+<ul>
+<li><strong>Request Body</strong>: <code>VerifyAccountRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apiauthlogin">POST <code>/api/auth/login/</code></h3>
+<p>Logs in a verified user and returns access and refresh tokens in cookies.</p>
+<ul>
+<li><strong>Request Body</strong>: <code>LoginRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apiauthlogout">POST <code>/api/auth/logout/</code></h3>
+<p>Clears cookies and deletes the refresh token from Redis.</p>
+<ul>
+<li><strong>Request</strong>: Cookie-based request  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apiauthrefresh-token">POST <code>/api/auth/refresh-token/</code></h3>
+<p>Generates new access and refresh tokens from a valid refresh token.</p>
+<ul>
+<li><strong>Request</strong>: Cookie-based request  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apisecurityforgot-password">POST <code>/api/security/forgot-password/</code></h3>
+<p>Triggers the password-reset flow.</p>
+<ul>
+<li><strong>Request Body</strong>: <code>ForgotPasswordRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apiusersresend-verification-code">POST <code>/api/users/resend-verification-code/</code></h3>
+<p>Resends the verification code for unverified users.</p>
+<ul>
+<li><strong>Request Body</strong>: <code>ResendCodeRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h2 id="2-hr-authentication">2. HR Authentication</h2>
+<h3 id="post-apihrregister">POST <code>/api/hr/register/</code></h3>
+<p>Registers a new HR account.</p>
+<ul>
+<li><strong>Request Body</strong>: <code>HrSignupRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apihrverify-account">POST <code>/api/hr/verify-account/</code></h3>
+<p>Verifies an HR account using a code.</p>
+<ul>
+<li><strong>Request Body</strong>: <code>HrVerifyRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apihrlogin">POST <code>/api/hr/login/</code></h3>
+<p>Logs in an HR user and returns token cookies.</p>
+<ul>
+<li><strong>Request Body</strong>: <code>HrLoginRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apihrresend-verification-code">POST <code>/api/hr/resend-verification-code/</code></h3>
+<p>Resends the HR verification code.</p>
+<ul>
+<li><strong>Request Body</strong>: <code>HrResendCodeRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h2 id="3-cv-builder">3. CV Builder</h2>
+<blockquote>
+<p>Manages user-resume data (experience, education, projects, skills) and AI-generated suggestions.</p>
+</blockquote>
+<h3 id="post-apiheaders">POST <code>/api/headers/</code></h3>
+<p>Creates a new CV header.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Request Body</strong>: <code>HeaderRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apiawards">POST <code>/api/awards/</code></h3>
+<p>Creates a new award entry.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Request Body</strong>: <code>AwardsRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apicertifications">POST <code>/api/certifications/</code></h3>
+<p>Creates a certification entry.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Request Body</strong>: <code>CertificationRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apieducations">POST <code>/api/educations/</code></h3>
+<p>Creates an education entry.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Request Body</strong>: <code>EducationRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apiexperiences">POST <code>/api/experiences/</code></h3>
+<p>Creates a work-experience entry.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Request Body</strong>: <code>ExperienceRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apiexperiencessuggestionsexperience_id">GET <code>/api/experiences/suggestions/{experience_id}/</code></h3>
+<p>Generates AI experience suggestions.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>experience_id</code> (int)  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="put-apiexperiencessave-descriptionexperience_id">PUT <code>/api/experiences/save-description/{experience_id}/</code></h3>
+<p>Saves an AI-generated experience description.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>experience_id</code> (int)  </li>
+<li><strong>Request Body</strong>: <code>ExperienceSaveRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apiobjectivessuggestions">POST <code>/api/objectives/suggestions/</code></h3>
+<p>Generates AI objective suggestions.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Request Body</strong>: <code>ObjectiveSaveRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="put-apiobjectivessave-descriptionobjective_id">PUT <code>/api/objectives/save-description/{objective_id}/</code></h3>
+<p>Saves an AI-generated objective.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>objective_id</code> (int)  </li>
+<li><strong>Request Body</strong>: <code>ObjectiveSaveRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apiprojects">POST <code>/api/projects/</code></h3>
+<p>Creates a project entry.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Request Body</strong>: <code>ProjectRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apiprojectsgenerate-descriptionproject_id">GET <code>/api/projects/generate-description/{project_id}/</code></h3>
+<p>Generates an AI description for a project.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>project_id</code> (int)  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="put-apiprojectssave-descriptionproject_id">PUT <code>/api/projects/save-description/{project_id}/</code></h3>
+<p>Saves an AI-generated project description.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>project_id</code> (int)  </li>
+<li><strong>Request Body</strong>: <code>ProjectDescriptionSaveRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apiskills-languages">POST <code>/api/skills-languages/</code></h3>
+<p>Creates skills and languages.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Request Body</strong>: <code>SkillsLanguagesRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apiskillssuggestions">GET <code>/api/skills/suggestions/</code></h3>
+<p>Generates AI skill suggestions.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="put-apiskillssaveskills_id">PUT <code>/api/skills/save/{skills_id}/</code></h3>
+<p>Saves selected skills and language level.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>skills_id</code> (int)  </li>
+<li><strong>Request Body</strong>: <code>SaveSkillsRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apivolunteerings">POST <code>/api/volunteerings/</code></h3>
+<p>Creates a volunteering entry.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Request Body</strong>: <code>VolunteeringRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apivolunteerings-suggestionsvolunteering_id">GET <code>/api/volunteerings-suggestions/{volunteering_id}/</code></h3>
+<p>Generates AI volunteering suggestions.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>volunteering_id</code> (int)  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="put-apivolunteerings-save-descriptionvolunteering_id">PUT <code>/api/volunteerings-save-description/{volunteering_id}/</code></h3>
+<p>Saves an AI-generated volunteering description.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>volunteering_id</code> (int)  </li>
+<li><strong>Request Body</strong>: <code>SaveVolunteeringRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apigenerate-cv">GET <code>/api/generate-cv/</code></h3>
+<p>Generates the full resume in HTML.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Response Type</strong>: <code>HTMLResponse</code></li>
+</ul>
+<hr />
+<h3 id="get-apidownload-cvpdf">GET <code>/api/download-cv/pdf/</code></h3>
+<p>Exports the resume as PDF and stores it.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apidownload-cvdocx">GET <code>/api/download-cv/docx/</code></h3>
+<p>Downloads the resume in DOCX format.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apiresumesfile_iddownload">GET <code>/api/resumes/{file_id}/download</code></h3>
+<p>Downloads a saved resume file.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>file_id</code> (str)  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apiregenerate-cv">GET <code>/api/regenerate-cv/</code></h3>
+<p>Regenerates the HTML CV from the latest data.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Response Type</strong>: <code>HTMLResponse</code></li>
+</ul>
+<hr />
+<h2 id="4-interview-system">4. Interview System</h2>
+<h3 id="post-apisessions">POST <code>/api/sessions/</code></h3>
+<p>Creates a new interview session.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Request Body</strong>: <code>JobData</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apisessionssession_idstart">POST <code>/api/sessions/{session_id}/start</code></h3>
+<p>Starts the interview session.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>session_id</code> (int)  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apisessionssession_idquestions">GET <code>/api/sessions/{session_id}/questions</code></h3>
+<p>Retrieves all questions in a session.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>session_id</code> (int)  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apisessionssession_idquestionsnext">GET <code>/api/sessions/{session_id}/questions/next</code></h3>
+<p>Retrieves the next question in the session.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>session_id</code> (int)  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apisessionssession_idanswers">POST <code>/api/sessions/{session_id}/answers</code></h3>
+<p>Submits an answer (video file) to a question.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>session_id</code> (int)  </li>
+<li><strong>Form Data</strong>: <code>file: UploadFile</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apisessionssession_idanswersquestion_indexfeedback">GET <code>/api/sessions/{session_id}/answers/{question_index}/feedback</code></h3>
+<p>Retrieves feedback for a given answer.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Params</strong>: <code>session_id</code>, <code>question_index</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apisessionssession_idend">POST <code>/api/sessions/{session_id}/end</code></h3>
+<p>Ends the session and triggers scoring.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>session_id</code> (int)  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apisessionssession_idscore">GET <code>/api/sessions/{session_id}/score</code></h3>
+<p>Retrieves the final score of the session.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>session_id</code> (int)  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apihomesummary">GET <code>/api/home/summary</code></h3>
+<p>Returns user statistics for the dashboard.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apihomeinterview-sessions">GET <code>/api/home/interview-sessions</code></h3>
+<p>Returns past sessions the user attended.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apisessionssession_iddetails">GET <code>/api/sessions/{session_id}/details</code></h3>
+<p>Returns detailed metadata about a session.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>session_id</code> (int)  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apiresumesdownload">GET <code>/api/resumes/download</code></h3>
+<p>Downloads the most recent resume.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h2 id="5-hr-interview">5. HR Interview</h2>
+<h3 id="post-apihrinterviewcreate">POST <code>/api/hr/interview/create</code></h3>
+<p>Creates interview metadata (title, description, timings, etc.).</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Request Body</strong>: <code>InterviewMetadataRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="put-apihrinterviewinterview_tokenquestionsindex">PUT <code>/api/hr/interview/{interview_token}/questions/{index}</code></h3>
+<p>Updates or replaces a specific interview question.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Params</strong>:  </li>
+<li><code>interview_token</code> (str)  </li>
+<li><code>index</code> (int)  </li>
+<li><strong>Request Body</strong>: <code>HRAddQuestionRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apihrinterviewinterview_tokeninvitationssend">POST <code>/api/hr/interview/{interview_token}/invitations/send</code></h3>
+<p>Sends email invitations to candidates for the interview.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>interview_token</code> (str)  </li>
+<li><strong>Request Body</strong>: <code>InterviewInvitationRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apihrinterviewvideo-streaminterview_tokenindex">GET <code>/api/hr/interview/video-stream/{interview_token}/{index}</code></h3>
+<p>Streams a candidate’s video answer by question index.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Params</strong>:  </li>
+<li><code>interview_token</code> (str)  </li>
+<li><code>index</code> (int)  </li>
+<li><strong>Query Param</strong>: <code>user_email</code> (str)  </li>
+<li><strong>Response</strong>: <code>StreamingResponse</code> (video)</li>
+</ul>
+<hr />
+<h3 id="get-apihrinterviewanswer-indexesinterview_token">GET <code>/api/hr/interview/answer-indexes/{interview_token}</code></h3>
+<p>Returns indexes of all answers grouped by type (video / text).</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>interview_token</code> (str)  </li>
+<li><strong>Query Param</strong>: <code>user_email</code> (str)  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apihrinterviewvideo-questioninterview_tokenindex">GET <code>/api/hr/interview/video-question/{interview_token}/{index}</code></h3>
+<p>Returns the video question, ideal answer, and candidate’s answer.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Params</strong>: <code>interview_token</code> (str), <code>index</code> (int)  </li>
+<li><strong>Query Param</strong>: <code>user_email</code> (str)  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apihrinterviewtext-questioninterview_tokenindex">GET <code>/api/hr/interview/text-question/{interview_token}/{index}</code></h3>
+<p>Returns a text-based question with candidate’s answer.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Params</strong>: <code>interview_token</code> (str), <code>index</code> (int)  </li>
+<li><strong>Query Param</strong>: <code>user_email</code> (str)  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="put-apihrinterviewinterview_tokenreview-status">PUT <code>/api/hr/interview/{interview_token}/review-status</code></h3>
+<p>Updates a candidate’s review status (e.g., accepted / rejected).</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>interview_token</code> (str)  </li>
+<li><strong>Query Params</strong>:  </li>
+<li><code>user_email</code> (str)  </li>
+<li><code>status</code> (str)  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apihrdashboard">GET <code>/api/hr/dashboard</code></h3>
+<p>Returns high-level statistics for the HR dashboard.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apihrinterviewinterview_tokenparticipants">GET <code>/api/hr/interview/{interview_token}/participants</code></h3>
+<p>Lists all candidates participating in the interview.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>interview_token</code> (str)  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="get-apihrquestionsbasicinterview_token">GET <code>/api/hr/questions/basic/{interview_token}/</code></h3>
+<p>Retrieves all basic (non-custom) questions defined for the interview.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>interview_token</code> (str)  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apihrinterviewlogininterview_token">POST <code>/api/hr/interview/login/{interview_token}</code></h3>
+<p>Candidate login to an interview (creates a session).</p>
+<ul>
+<li><strong>Path Param</strong>: <code>interview_token</code> (str)  </li>
+<li><strong>Request Body</strong>: <code>InterviewLoginRequest</code>  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-apihrinterviewinterview_tokenquestionindexanswer">POST <code>/api/hr/interview/{interview_token}/question/{index}/answer</code></h3>
+<p>Uploads a video or text answer for a given question.</p>
+<ul>
+<li><strong>Path Params</strong>: <code>interview_token</code> (str), <code>index</code> (int)  </li>
+<li><strong>Form Data</strong>:  </li>
+<li><code>user_email</code> (str)  </li>
+<li><code>file</code> (UploadFile) <em>or</em> <code>json_data</code> (text)  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h3 id="post-upload">POST <code>/upload</code></h3>
+<p>Enqueues a background job to process a video.</p>
+<ul>
+<li><strong>Query Param</strong>: <code>video_id</code> (str)  </li>
+<li><strong>Response</strong>: <code>{ "message": "Video processing started in background" }</code></li>
+</ul>
+<hr />
+<h3 id="get-apihrinterviewinterview_tokenoverall-score">GET <code>/api/hr/interview/{interview_token}/overall-score</code></h3>
+<p>Returns the overall score for a candidate’s interview.</p>
+<ul>
+<li><strong>Auth Required</strong>: Yes  </li>
+<li><strong>Path Param</strong>: <code>interview_token</code> (str)  </li>
+<li><strong>Query Param</strong>: <code>user_email</code> (str)  </li>
+<li><strong>Response</strong>: <code>BaseResponseModel</code></li>
+</ul>
+<hr />
+<h2 id="response-format">Response Format</h2>
+<p>All responses use the custom <code>BaseResponseModel</code>:</p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;error&quot;: null,
+  &quot;code&quot;: 200,
+  &quot;data&quot;: { ... }
+}
+</code></pre>
+<p>Or in case of failure:</p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;error&quot;,
+  &quot;error&quot;: &quot;Invalid credentials&quot;,
+  &quot;code&quot;: 401,
+  &quot;data&quot;: null
+}
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "search.highlight", "toc.integrate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

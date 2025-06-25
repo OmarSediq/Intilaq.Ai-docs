@@ -1,0 +1,922 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../cv_builder/">
+      
+      
+        <link rel="next" href="../hr_interview/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Interview System - Intilaq AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#interview-system" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Intilaq AI" class="md-header__button md-logo" aria-label="Intilaq AI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Intilaq AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Interview System
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Intilaq AI" class="md-nav__button md-logo" aria-label="Intilaq AI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Intilaq AI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auth_and_authz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authentication & Authorization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cv_builder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CV Builder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Interview System
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interview System
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#database-models-mongodb-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Models (MongoDB + Redis)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database Models (MongoDB + Redis)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mongodb-collections" class="md-nav__link">
+    <span class="md-ellipsis">
+      MongoDB Collections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MongoDB Collections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      questions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      answers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session_results" class="md-nav__link">
+    <span class="md-ellipsis">
+      session_results
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user_home_summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      user_home_summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redis-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redis Keys
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-service-geminiaiservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI Service: GeminiAIService
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI Service: GeminiAIService">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI Workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whisper-transcriber-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Whisper Transcriber Service
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Whisper Transcriber Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#speech-to-text-micro-service-whisper" class="md-nav__link">
+    <span class="md-ellipsis">
+      Speech-to-Text Micro-service (Whisper)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Speech-to-Text Micro-service (Whisper)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-a-separate-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why a separate service?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-layer-crud-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Layer (CRUD + AI)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation Pattern
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hr_interview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HR Interview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deployment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Backend_Presentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backend Presentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="interview-system">Interview System</h1>
+<p>This document outlines the full backend structure, AI integration, and data flow for the <strong>Interview System</strong> feature in the Intilaq AI platform. It covers MongoDB models, Redis session handling, microservices, and AI evaluation flow.</p>
+<hr />
+<h2 id="database-models-mongodb-redis">Database Models (MongoDB + Redis)</h2>
+<h3 id="mongodb-collections">MongoDB Collections</h3>
+<h4 id="questions"><code>questions</code></h4>
+<p>Represents a full interview session with job metadata and AI-generated content.</p>
+<ul>
+<li><code>session_id</code>: Unique session identifier.</li>
+<li><code>user_id</code>: ID of the user taking the interview.</li>
+<li><code>job_title</code>: Target job title.</li>
+<li><code>level</code>: Optional job level (e.g., Junior, Senior).</li>
+<li><code>questions</code>: List of:</li>
+<li><code>question_index</code></li>
+<li><code>question</code></li>
+<li><code>best_model_answer</code>: Gemini-generated ideal response.</li>
+<li><code>current_question_index</code>: Active pointer during session.</li>
+<li><code>created_at</code>: Timestamp.</li>
+</ul>
+<hr />
+<h4 id="answers"><code>answers</code></h4>
+<p>Each document represents one answer submitted by the user.</p>
+<ul>
+<li><code>session_id</code>, <code>user_id</code>, <code>question_index</code></li>
+<li><code>answer_text</code>: Whisper-generated transcription.</li>
+<li><code>similarity_score</code>: Float (0.00 to 10.00).</li>
+<li><code>feedback</code>: Structured dict with:</li>
+<li><code>strengths</code></li>
+<li><code>weaknesses</code></li>
+<li><code>constructive_feedback</code></li>
+<li><code>timestamp</code>: UTC datetime of submission.</li>
+</ul>
+<hr />
+<h4 id="session_results"><code>session_results</code></h4>
+<p>Final summary stored when session ends.</p>
+<ul>
+<li><code>session_id</code>, <code>user_id</code></li>
+<li><code>final_score</code>: Out of 100.</li>
+<li><code>answered_questions</code>: Count of submitted answers.</li>
+<li><code>accuracy</code>: Averaged % across questions.</li>
+<li><code>status</code>: <code>"ended"</code></li>
+<li><code>ended_at</code>: Completion datetime.</li>
+</ul>
+<hr />
+<h4 id="user_home_summary"><code>user_home_summary</code></h4>
+<p>Aggregated statistics for user dashboard.</p>
+<ul>
+<li><code>user_id</code></li>
+<li><code>total_interviews</code></li>
+<li><code>total_answers</code></li>
+<li><code>avg_score</code>: Overall average score.</li>
+<li><code>accuracy</code>: Average similarity across all answers.</li>
+<li><code>last_session</code>: Dict with last session metadata.</li>
+<li><code>updated_at</code></li>
+</ul>
+<hr />
+<h3 id="redis-keys">Redis Keys</h3>
+<p>Used for in-memory session control.</p>
+<ul>
+<li><code>user:{user_id}:session_ids</code> → Active session ID list.</li>
+<li><code>session:{session_id}:current_index</code> → Pointer to current question.</li>
+<li><code>session:{session_id}:status</code> → "active", "ended", etc.</li>
+</ul>
+<hr />
+<h2 id="design-notes">Design Notes</h2>
+<ul>
+<li>MongoDB supports nested <code>questions[]</code> and <code>answers[]</code> documents.</li>
+<li>Redis accelerates state transitions during interviews.</li>
+<li>All lookups use <code>{session_id, user_id}</code>—no joins required.</li>
+<li>Final evaluation is triggered by user or timeout via <code>InterviewScoreService</code>.</li>
+</ul>
+<hr />
+<h2 id="ai-service-geminiaiservice">AI Service: <code>GeminiAIService</code></h2>
+<p>Located at:<br />
+<code>backend/domain_services/ai_services/gemini_ai_service.py</code></p>
+<p>Uses <strong>Gemini 1.5 Flash</strong> to generate and analyze interview questions and responses.</p>
+<h3 id="supported-methods">Supported Methods</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>generate_interview_questions(role, level, description)</code></td>
+<td>Generates 10 tailored questions</td>
+<td>List of strings</td>
+</tr>
+<tr>
+<td><code>generate_best_answer(question)</code></td>
+<td>Strong ideal answer for scoring</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>generate_feedback(user_answer, question, ideal_answer)</code></td>
+<td>Strengths, weaknesses, feedback</td>
+<td>Dict</td>
+</tr>
+<tr>
+<td><code>analyze_similarity_score(answer, model_answer)</code></td>
+<td>TF-IDF similarity (0–10)</td>
+<td>Float</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Prompts are engineered for clarity and completeness. No placeholders are returned.</p>
+</blockquote>
+<hr />
+<h2 id="ai-workflow">AI Workflow</h2>
+<ol>
+<li><strong>Frontend</strong> sends job metadata (title, level, description).</li>
+<li><strong>InterviewSessionService</strong> uses Gemini to generate questions.</li>
+<li>Questions and model answers stored in MongoDB (<code>questions</code>).</li>
+<li>User answers via audio. Whisper converts to text.</li>
+<li>Transcription stored in <code>answers</code>.</li>
+<li>Feedback and score generated, stored in same answer record.</li>
+<li>When session ends, stats saved to <code>session_results</code> and <code>user_home_summary</code>.</li>
+</ol>
+<hr />
+<h2 id="whisper-transcriber-service">Whisper Transcriber Service</h2>
+<p>Located at:<br />
+<code>backend/domain_services/ai_services/whisper_transcriber_service.py</code></p>
+<h3 id="key-features">Key Features</h3>
+<ul>
+<li>Accepts <code>.webm</code>, <code>.mp3</code>, or raw audio <code>bytes</code>.</li>
+<li>Uses FFmpeg + Whisper for accurate, fast transcription.</li>
+<li>Returns <code>{ text, language, error }</code>.</li>
+</ul>
+<p>This is part of a <strong>standalone microservice</strong>, not the main FastAPI app.</p>
+<hr />
+<h2 id="speech-to-text-micro-service-whisper">Speech-to-Text Micro-service (Whisper)</h2>
+<p>The Interview System delegates audio processing to an external FastAPI microservice for performance and modularity.</p>
+<h3 id="why-a-separate-service">Why a separate service?</h3>
+<table>
+<thead>
+<tr>
+<th>Reason</th>
+<th>Benefit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPU / CPU isolation</td>
+<td>Whisper uses CUDA without locking main app threads</td>
+</tr>
+<tr>
+<td>Cold-start caching</td>
+<td>Model is loaded once, reused across all requests</td>
+</tr>
+<tr>
+<td>Language agnostic</td>
+<td>Any backend can POST to the transcriber endpoint</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="service-layer-crud-ai">Service Layer (CRUD + AI)</h2>
+<p>All services follow Clean Architecture with clear separation between validation, business logic, and storage access.</p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Role</th>
+<th>Repositories Used</th>
+<th>AI Used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>InterviewSessionService</code></td>
+<td>Creates, stores, and starts new sessions</td>
+<td><code>InterviewRepository</code>, <code>SessionRedisRepository</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>InterviewAnswerService</code></td>
+<td>Accepts audio, sends to Whisper, stores text</td>
+<td><code>InterviewRepository</code>, <code>WhisperTranscriberService</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>InterviewFeedbackService</code></td>
+<td>Uses Gemini to provide feedback on answers</td>
+<td><code>InterviewRepository</code>, <code>GeminiAIService</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>InterviewScoreService</code></td>
+<td>Computes final session score and summary</td>
+<td><code>InterviewRepository</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>InterviewQuestionService</code></td>
+<td>Returns next or full list of questions</td>
+<td><code>InterviewRepository</code>, <code>SessionRedisRepository</code></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>InterviewValidatorService</code></td>
+<td>Session validation and permission checks</td>
+<td><code>InterviewRepository</code>, <code>SessionRedisRepository</code></td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="validation-pattern">Validation Pattern</h2>
+<p>Each service begins with session validation using <code>InterviewValidatorService</code>.</p>
+<p>This ensures that the <code>session_id</code> belongs to the authenticated <code>user_id</code> before proceeding with logic or storage operations.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "search.highlight", "toc.integrate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

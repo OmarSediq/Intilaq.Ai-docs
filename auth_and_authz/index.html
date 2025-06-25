@@ -1,0 +1,856 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../cv_builder/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Authentication & Authorization - Intilaq AI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#authentication-authorization-full-logic-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Intilaq AI" class="md-header__button md-logo" aria-label="Intilaq AI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Intilaq AI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Authentication & Authorization
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Intilaq AI" class="md-nav__button md-logo" aria-label="Intilaq AI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Intilaq AI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Authentication & Authorization
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authentication & Authorization
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#regular-user-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regular User Authentication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regular User Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registration-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registration &amp; Verification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login-logout-token-refresh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login / Logout / Token Refresh
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hr-user-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      HR User Authentication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HR User Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registration-verification_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registration &amp; Verification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tokenservice-shared" class="md-nav__link">
+    <span class="md-ellipsis">
+      TokenService (Shared)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis-based-session-code-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redis-Based Session &amp; Code Handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Redis-Based Session &amp; Code Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coderedisrepository" class="md-nav__link">
+    <span class="md-ellipsis">
+      CodeRedisRepository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sessionredisrepository" class="md-nav__link">
+    <span class="md-ellipsis">
+      SessionRedisRepository
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-design-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Design (PostgreSQL)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-middleware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Middleware
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Middleware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responsibilities:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-layers-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Layers Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-authentication-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Authentication Flow
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cv_builder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CV Builder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interview_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interview System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hr_interview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HR Interview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deployment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Backend_Presentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backend Presentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="authentication-authorization-full-logic-overview">Authentication &amp; Authorization (Full Logic Overview)</h1>
+<p>The Intilaq AI platform implements a robust authentication and authorization system, using <strong>JWT</strong>, <strong>Redis</strong>, and <strong>PostgreSQL</strong>. The architecture separates the logic for <strong>Regular Users</strong> and <strong>HR Users</strong>, while sharing core services and infrastructure for token management and session control. The system is fully aligned with <strong>Clean Architecture</strong> principles and uses <strong>Dependency Injection</strong> to isolate concerns and enable testability.</p>
+<hr />
+<h2 id="regular-user-authentication">Regular User Authentication</h2>
+<h3 id="registration-verification">Registration &amp; Verification</h3>
+<p>The <code>AccountService</code> coordinates the entire registration and verification logic:</p>
+<ul>
+<li><strong>Password Matching</strong>: Validates that <code>password</code> equals <code>confirm_password</code>.</li>
+<li><strong>Duplicate Check</strong>: Verifies if a username or email already exists.</li>
+<li><strong>User Creation</strong>: Registers a new user with <code>is_verified = 0</code> in the <code>users</code> table.</li>
+<li><strong>Code Generation</strong>: A 6-digit code is generated and stored using <code>UserRepository.save_reset_code()</code>. This is saved in the <code>reset_codes</code> table and/or Redis with a TTL of 5 minutes.</li>
+<li><strong>Verification</strong>:</li>
+<li>Verifies the code using both DB and Redis.</li>
+<li>If <code>new_password</code> exists, the password is updated using a hash.</li>
+<li>If not, <code>is_verified</code> is set to <code>1</code>.</li>
+</ul>
+<h3 id="login-logout-token-refresh">Login / Logout / Token Refresh</h3>
+<p>The <code>AuthService</code> handles session state with JWT:</p>
+<ul>
+<li><strong>Login</strong>:</li>
+<li>Validates credentials (<code>email</code>, <code>password</code>) against hashed values.</li>
+<li>If the account is verified, generates both <code>access_token</code> and <code>refresh_token</code> via <code>TokenService</code>.</li>
+<li>
+<p>Stores <code>refresh_token</code> in Redis and sends both tokens as <code>HttpOnly</code> cookies.</p>
+</li>
+<li>
+<p><strong>Logout</strong>:</p>
+</li>
+<li>Extracts <code>refresh_token</code> from cookie.</li>
+<li>Verifies token against Redis.</li>
+<li>
+<p>Deletes stored token and clears cookies.</p>
+</li>
+<li>
+<p><strong>Refresh</strong>:</p>
+</li>
+<li>Extracts <code>refresh_token</code>, verifies it via <code>TokenService</code>, and issues a new <code>access_token</code>.</li>
+<li>Stores it as a secure cookie again.</li>
+</ul>
+<hr />
+<h2 id="hr-user-authentication">HR User Authentication</h2>
+<p>The HR auth flow is handled separately via dedicated services:</p>
+<h3 id="registration-verification_1">Registration &amp; Verification</h3>
+<ul>
+<li><strong><code>HRRegisterService</code></strong>:</li>
+<li>Registers new HR users into <code>hr_users</code>.</li>
+<li>
+<p>Generates and stores a reset code into <code>reset_codes</code>.</p>
+</li>
+<li>
+<p><strong><code>HRVerificationService</code></strong>:</p>
+</li>
+<li>
+<p>Validates the reset code and sets <code>is_verified = 1</code> on the HR user.</p>
+</li>
+<li>
+<p><strong>Code Resending</strong>:</p>
+</li>
+<li>Only allowed if user is not verified.</li>
+<li>Sends a new 6-digit code via <code>send_email()</code> utility.</li>
+</ul>
+<h3 id="login">Login</h3>
+<ul>
+<li><strong><code>HRAuthService</code></strong>:</li>
+<li>Verifies business email and password.</li>
+<li>On success, generates <code>access_token</code> and <code>refresh_token</code>.</li>
+<li>Tokens are stored in Redis and set as cookies (<code>HttpOnly</code>, <code>Secure</code>).</li>
+</ul>
+<hr />
+<h2 id="tokenservice-shared">TokenService (Shared)</h2>
+<p>This service abstracts all JWT logic and is reused by both user types.</p>
+<ul>
+<li><strong>Token Generation</strong>:</li>
+<li><code>create_access_token(user_id, role)</code> – valid for 15 minutes.</li>
+<li>
+<p><code>create_refresh_token(user_id)</code> – valid for 7 days.</p>
+</li>
+<li>
+<p><strong>Token Storage</strong>:</p>
+</li>
+<li><code>store_refresh_token(user_id, token)</code> → Redis (<code>user:{id}:refresh_token</code>)</li>
+<li><code>get_stored_refresh_token(user_id)</code> → used for validation</li>
+<li>
+<p><code>delete_refresh_token(user_id)</code> → clears Redis entry</p>
+</li>
+<li>
+<p><strong>Token Decoding &amp; Validation</strong>:</p>
+</li>
+<li>Verifies JWT signature, expiry, and structure.</li>
+</ul>
+<hr />
+<h2 id="redis-based-session-code-handling">Redis-Based Session &amp; Code Handling</h2>
+<h3 id="coderedisrepository"><code>CodeRedisRepository</code></h3>
+<p>Used for:
+- Storing temporary verification codes (keyed by email).
+- Valid for 5 minutes using <code>setex</code>.
+- Deleted after use or expiry.</p>
+<h3 id="sessionredisrepository"><code>SessionRedisRepository</code></h3>
+<p>Used to manage:
+- Current question index per interview session.
+- Completed questions set.
+- Session status tracking (e.g., <code>in_progress</code>, <code>completed</code>).
+- All stored with user/session-specific keys.</p>
+<hr />
+<h2 id="database-design-postgresql">Database Design (PostgreSQL)</h2>
+<ul>
+<li><code>users</code>: Holds all regular user data and verification status.</li>
+<li><code>hr_users</code>: Contains HR-specific data, including business details.</li>
+<li><code>reset_codes</code>: Common table used for both user types for email-based verification.</li>
+</ul>
+<hr />
+<h2 id="authentication-middleware">Authentication Middleware</h2>
+<p>File: <code>backend/core/middlewares/auth_logging.py</code></p>
+<h3 id="responsibilities">Responsibilities:</h3>
+<ul>
+<li>Reads <code>access_token</code> from request cookies.</li>
+<li>Decodes and verifies the token using <code>TokenService</code>.</li>
+<li>On valid token:</li>
+<li>Extracts <code>user_id</code> and <code>role</code>.</li>
+<li>Sets <code>request.state.user = {user_id, role}</code> for use in any route.</li>
+<li>Logs every authenticated request.</li>
+<li>On expired or invalid token:</li>
+<li>Logs a warning and proceeds anonymously (non-blocking).</li>
+</ul>
+<hr />
+<h2 id="security-layers-overview">Security Layers Overview</h2>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Used For</th>
+<th>Technologies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Token</td>
+<td>Session authentication</td>
+<td>JWT (access &amp; refresh)</td>
+</tr>
+<tr>
+<td>Token Storage</td>
+<td>Refresh token persistence</td>
+<td>Redis</td>
+</tr>
+<tr>
+<td>Code Validation</td>
+<td>Account verification &amp; reset</td>
+<td>Redis &amp; PostgreSQL <code>reset_codes</code></td>
+</tr>
+<tr>
+<td>Cookie Handling</td>
+<td>Stateless session propagation</td>
+<td>FastAPI secure cookies</td>
+</tr>
+<tr>
+<td>Middleware</td>
+<td>Silent session validation</td>
+<td>Custom <code>BaseHTTPMiddleware</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sample-authentication-flow">Sample Authentication Flow</h2>
+<ol>
+<li>User registers  </li>
+<li>User receives 6-digit verification code via email  </li>
+<li>User verifies → system sets <code>is_verified = 1</code>  </li>
+<li>User logs in → JWT access/refresh tokens are issued and stored in cookies  </li>
+<li>Cookies (<code>access_token</code>, <code>refresh_token</code>) are sent automatically with each request  </li>
+<li><code>AuthenticationMiddleware</code> extracts the token, validates it, and attaches user data to <code>request.state.user</code></li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "search.highlight", "toc.integrate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
